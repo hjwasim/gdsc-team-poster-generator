@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Google Sans", sans-serif;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* MAIN IMG CONTAINER */
+.img_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GDSC LOGO BADGE FOR DESKTOP VIEW - DEFAULT*/
+.gdsc_badge_top {
+  position: absolute;
+  z-index: 3;
+  top: 2em;
+  left: 2em;
+  width: 7em;
+  transform: rotate(-19deg);
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+}
+/* IMG CROPPING */
+.crop {
+  width: 100%;
+  min-width: 370px;
+  height: 290px;
+  overflow: hidden;
+}
+
+.crop img {
+  width: 100%;
+  margin: -75px 0 0 -100px;
+}
+.centered-and-cropped {
+  object-fit: cover;
+}
+/* PT font */
+.pt-font {
+  font-family: "PT Mono", monospace;
+}
+/* UTIL STYLES */
+
+.break {
+  word-break: break-all;
+}
+
+span.name {
+  color: #303030;
+}
+
+.img_holder {
+  position: absolute;
+  z-index: 1;
+}
+
+.img_box {
+  max-width: fit-content;
+}
+
+.green {
+  color: #1a9956;
+}
+
+@media all and (min-width: 720px) and (max-width: 1024px) {
+  .col-6 {
+    width: 100%;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .gdsc_badge_top {
+    width: 6em;
+  }
+  .crop {
+    width: 100%;
+    min-width: 550px;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .col-6 {
+    width: 100%;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .gdsc_badge_top {
+    width: 6em;
+    top: 0.1em;
+    left: 0.1em;
+  }
+  .crop {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+  }
+}
