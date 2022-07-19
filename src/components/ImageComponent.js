@@ -15,7 +15,7 @@ const ImageComponent = () => {
           {cxt.img != null ? (
             <img alt="" src={cxt.img} className="crop centered-and-cropped" accept="image/x-png,image/gif,image/jpeg" />
           ) : (
-            <img alt="" src={require("../assets/actor.jpg")} className="crop" />
+            <img alt="" src={require("../assets/actor.jpg")} className="crop centered-and-cropped" />
           )}
         </div>
         <div className="my-2 d-flex flex-column justify-content-center align-items-center">

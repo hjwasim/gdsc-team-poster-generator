@@ -10,11 +10,12 @@ const Form = () => {
         onSubmit={(e) => {
           e.preventDefault();
           domtoimage
-            .toPng(cxt.my_dom_ref.current, { quality: 1 })
+            .toPng(cxt.my_dom_ref.current, { quality: 1})
             .then(function (dataUrl) {
               var link = document.createElement("a");
-              link.download = "gdsc-badge.png";
+              link.download = "gdsc-hits-badge.png";
               link.href = dataUrl;
+              console.log(dataUrl)
               link.click();
             });
         }}
